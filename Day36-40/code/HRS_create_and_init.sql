@@ -29,9 +29,9 @@ dno int comment '所在部门编号'
 );
 
 alter table tb_emp add constraint pk_emp_eno primary key (eno);
-alter table tb_emp add constraint uk_emp_ename unique (ename);
+-- alter table tb_emp add constraint uk_emp_ename unique (ename);
 -- alter table tb_emp add constraint fk_emp_mgr foreign key (mgr) references tb_emp (eno);
-alter table tb_emp add constraint fk_emp_dno foreign key (dno) references tb_dept (dno);
+-- alter table tb_emp add constraint fk_emp_dno foreign key (dno) references tb_dept (dno);
 
 insert into tb_emp values 
     (7800, '张三丰', '总裁', null, 9000, 1200, 20),
@@ -69,3 +69,5 @@ insert into tb_emp values
 -- 查询主管的姓名和职位
 
 -- 查询月薪排名4~6名的员工排名、姓名和月薪
+
+-- 查询每个部门月薪排前2名的员工姓名、月薪和部门编号
